@@ -2,12 +2,18 @@
 <html>
 	<head>
 		<meta charset = "utf-8">
-		<title>First Javascript</title>
+		<title>Temperature</title>
 		<script type = "text/javascript">
-			var celsius, fahrenheit;
-			celsius = window.prompt("Please enter Celsius", "Enter here");
-			fahrenheit = 1.8 * celsius + 32;
-			document.writeln("<h3>Celsius is " + celsius + "<br>Fahrenheit is " + fahrenheit + "</h3>");
+			var celsius;	//攝氏溫度變數
+			var fahrenheit;		//華氏溫度變數
+			celsius = window.prompt("Please enter Celsius", "Enter here");	//攝氏溫度輸入視窗
+			
+			function celsiusToFahrenheit(temperature){
+				return 1.8 * temperature + 32;
+			}
+			
+			fahrenheit = celsiusToFahrenheit(celsius);	//攝氏轉華氏Function
+			document.writeln("<h3>Celsius of input is " + celsius + "<br>Fahrenheit is " + fahrenheit + "</h3>");	//顯示攝氏與華氏溫度
 		</script>
 	</head>
 	<body>
